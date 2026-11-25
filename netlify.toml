@@ -1,0 +1,12 @@
+# Static HTML site: no framework, package manager, or build step.
+# Files are published directly from the repository root.
+[build]
+  publish = "."
+  command = ""
+
+# The homepage file is named "Index.html" (capital I), but Netlify serves
+# lowercase "index.html" at "/". Rewrite the root to the existing file.
+[[redirects]]
+  from = "/"
+  to = "/Index.html"
+  status = 200
